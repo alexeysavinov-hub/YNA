@@ -42,6 +42,10 @@ button { font-family:var(--font-body); }
 .navlinks a { color:#B9B2A2; }
 .navlinks a.cta { border:1px solid var(--accent); color:var(--accent); padding:9px 18px; transition:background .35s ease, color .35s ease; }
 .navlinks a.cta:hover { background:var(--accent); color:var(--bg); }
+@media (max-width:760px) {
+  .navlinks { order:6; flex-basis:100%; }
+  .navlinks a.cta { display:none; }
+}
 /* Hero */
 .hero { position:relative; min-height:88vh; display:flex; align-items:flex-end; overflow:hidden; }
 .hero .bg { position:absolute; inset:0; overflow:hidden; }
@@ -159,10 +163,10 @@ html[dir="rtl"] .fab { right:auto; left:clamp(16px,3vw,32px); }
     <a href="#delivery" data-i18n="navDelivery">DELIVERY</a>
     <a href="#contact" data-i18n="navContact">CONTACT</a>
     <a href="#contact" class="cta" data-i18n="getInTouch">GET IN TOUCH</a>
-    <div class="langs">
-      <button id="btn-en" onclick="setLang('en')">EN</button>
-      <button id="btn-ar" class="ar" onclick="setLang('ar')">العربية</button>
-    </div>
+  </div>
+  <div class="langs">
+    <button id="btn-en" onclick="setLang('en')">EN</button>
+    <button id="btn-ar" class="ar" onclick="setLang('ar')">العربية</button>
   </div>
 </div>
 <div class="hero" id="about">
